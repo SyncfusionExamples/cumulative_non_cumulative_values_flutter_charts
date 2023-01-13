@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,11 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
+    return const MaterialApp(home: MyHomePage());
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
   MyHomePageState createState() => MyHomePageState();
 }
 
@@ -22,6 +25,7 @@ class MyHomePageState extends State<MyHomePage> {
   late List<String>? cumulativeDataLabel;
   late List<ChartData> chartData;
 
+  @override
   void initState() {
     chartData = <ChartData>[
       ChartData('China', 11, 12, 13, 18),
@@ -33,6 +37,7 @@ class MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
