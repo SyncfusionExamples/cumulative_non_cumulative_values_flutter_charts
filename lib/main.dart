@@ -44,7 +44,7 @@ class MyHomePageState extends State<MyHomePage> {
       body: SfCartesianChart(
           annotations: getAnnotation(),
           primaryXAxis: CategoryAxis(),
-          series: <ChartSeries<ChartData, String>>[
+          series: <StackedColumnSeries<ChartData, String>>[
             StackedColumnSeries<ChartData, String>(
                 name: 'series1',
                 dataLabelSettings: const DataLabelSettings(isVisible: true),
